@@ -1,0 +1,42 @@
+export const namePool = [
+  "sus",
+  "bruh",
+  "yeet",
+  "based",
+  "cringe",
+  "simp",
+  "pog",
+  "kek",
+  "uwu",
+  "owo",
+  "lowkey",
+  "highkey",
+  "vibe",
+  "flex",
+  "noCap",
+  "fam",
+  "bet",
+  "mood",
+  "salty",
+  "ghosted",
+  "shook",
+  "tea",
+  "deadass",
+  "slaps",
+  "lit",
+  "periodt",
+  "snacc",
+  "goat",
+  "drip",
+  "bussin",
+  "smol",
+  "chonky",
+  "reee",
+  "okBoomer",
+  "bigYikes",
+];
+
+export function nextName(kind, scope, attempt) {
+  const index = attempt % namePool.length;
+  return namePool[index];
+}

@@ -60,6 +60,9 @@ badname ./src --include "**/*.{js,ts,jsx,tsx}"
 # Use different naming mode
 badname ./src --mode finalHell
 
+# Use meme-inspired variable names
+badname ./src --mode memeLord
+
 # Transform specific files
 badname ./src/components --include "**/*.tsx"
 ```
@@ -84,6 +87,12 @@ Transforms variables using a pool of generic names:
 
 Another naming scheme for different obfuscation patterns.
 
+#### `memeLord`
+
+Transforms variables using modern internet slang and meme-inspired names:
+
+- `sus`, `bruh`, `yeet`, `based`, `cringe`, `simp`, `pog`, `uwu`, `vibe`, `lit`, `bussin`, etc.
+
 ## Examples
 
 ### Before Transformation
@@ -98,11 +107,23 @@ function calculateTotalPrice(items, taxRate) {
 
 ### After Transformation
 
+#### Default mode (`newOldHell`):
+
 ```javascript
 function calculateTotalPrice(final, ok) {
   const test = final.reduce((temp, data) => temp + data.price, 0);
   const foo = test * ok;
   return test + foo;
+}
+```
+
+#### memeLord mode:
+
+```javascript
+function calculateTotalPrice(sus, bruh) {
+  const yeet = sus.reduce((based, cringe) => based + cringe.price, 0);
+  const simp = yeet * bruh;
+  return yeet + simp;
 }
 ```
 
